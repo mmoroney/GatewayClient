@@ -1,5 +1,7 @@
-﻿using System;
+﻿using GatewayClient;
+using System;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -22,10 +24,12 @@ try {
 
     Console.WriteLine("--- Connected! (Press Ctrl+C to quit) ---\n");
 
-    // Task 1: Start the background listener for incoming text
-    var readTask = Task.Run(() => ReadFromServer());
+    TriggerManager.EnableTrigger("OnHealthCheck", false, (string[] tokens) => {
+        Console.WriteLine("Health checked");
+    });
 
-    // Task 2: Handle user input on the main thread
+    var readTask = Task.Run(ReadFromServer);
+
     while (_isConnected) {
         string? input = Console.ReadLine();
         if (string.IsNullOrEmpty(input)) continue;
@@ -61,6 +65,7 @@ async Task ReadFromServer() {
             // Convert bytes to string and display immediately
             string text = Encoding.ASCII.GetString(buffer, 0, bytesRead);
             Console.Write(text);
+            TriggerManager.ProcessIncomingLine(text);
         }
     }
     catch (Exception) {
@@ -68,3 +73,4 @@ async Task ReadFromServer() {
             Console.WriteLine("\n[INFO] Disconnected from server.");
     }
 }
+
