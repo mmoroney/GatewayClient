@@ -34,6 +34,10 @@ try {
         string? input = Console.ReadLine();
         if (string.IsNullOrEmpty(input)) continue;
 
+        if (AliasManager.ProcessOutgoingLine(input)) {
+            continue;
+        }
+
         // Send the command + newline to the MUD
         byte[] data = Encoding.ASCII.GetBytes(input + "\n");
         await _stream.WriteAsync(data);
