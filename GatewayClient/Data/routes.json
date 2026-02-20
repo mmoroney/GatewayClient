@@ -1,0 +1,893 @@
+{
+  "Routes": [
+    {
+      "Source": "newbie",
+      "Destination": "dragonsgate",
+      "Commands": "10 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "wall",
+      "Commands": "4 e, ne, se, u, 3 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "downroad",
+      "Commands": "9 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "downroad",
+      "Destination": "sign",
+      "Commands": "2 sw, 10 s, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "downroad",
+      "Destination": "slavers",
+      "Commands": "4 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "slavers",
+      "Destination": "highfortress",
+      "Commands": "4 w, s, 2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "highfortress",
+      "Destination": "chogi",
+      "Commands": "w, u, e, ne, nw, sw",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "sign",
+      "Destination": "cobras",
+      "Commands": "2 e, 3 d, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "serpent",
+      "Destination": "cobras",
+      "Commands": "3 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "cobras",
+      "Destination": "serpent",
+      "Commands": "10 n, 4 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-camile",
+      "Destination": "forest",
+      "Commands": "w, 7 s, 4 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "forest",
+      "Destination": "fenlar",
+      "Commands": "4 n, 4 w, 4 n, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "forest",
+      "Destination": "findle",
+      "Commands": "4 e, 8 n, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "mirror-chapel",
+      "Commands": "2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "catapult-haven",
+      "Destination": "dukis",
+      "Commands": "e, 2 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "digger",
+      "Destination": "alchemist",
+      "Commands": "3 s, 5 w, 2 n, 2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "digger",
+      "Destination": "barlic",
+      "Commands": "n, e, n, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "devilkin",
+      "Destination": "barlic",
+      "Commands": "e, 3 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "devilkin",
+      "Destination": "firebrand",
+      "Commands": "s, 2 e, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "firebrand",
+      "Destination": "kraken",
+      "Commands": "2 s, e, dive, down",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "kraken",
+      "Destination": "firebrand",
+      "Commands": "2 u, w, 2 n",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "barlic",
+      "Destination": "cove",
+      "Commands": "4 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "cove",
+      "Destination": "turtle",
+      "Commands": "2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "alchemist",
+      "Destination": "spire",
+      "Commands": "2 w, 8 s, 2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "spire",
+      "Destination": "emily",
+      "Commands": "2 w, n, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "spire",
+      "Destination": "gramm",
+      "Commands": "3 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "spire",
+      "Destination": "spider",
+      "Commands": "2 w, 2 n, 9 w, 3 n, 3 w, s, w, d",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "spider",
+      "Destination": "city",
+      "Commands": "2 n, w, n ,d",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "city",
+      "Destination": "lord",
+      "Commands": "9 n, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "city",
+      "Destination": "berg",
+      "Commands": "3 n, 4 e, 2 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "spire",
+      "Destination": "nav",
+      "Commands": "2 w, 2 s, e, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "barkle",
+      "Commands": "4 e, 5 ne, 3 nw",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "barkle",
+      "Destination": "ninja",
+      "Commands": "n, 3 w, 4 u, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "ninja",
+      "Destination": "gazebo",
+      "Commands": "7 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "cove",
+      "Destination": "largeclearing",
+      "Commands": "3 w, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "largeclearing",
+      "Destination": "god",
+      "Commands": "3 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "spineshire",
+      "Commands": "ne, 2 e, ne, e, ne, 2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "barkle",
+      "Destination": "hotel",
+      "Commands": "3 n, enter",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "hotel",
+      "Destination": "barkle",
+      "Commands": "w, 3 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "fenlar",
+      "Destination": "tapestry",
+      "Commands": "2 n, w, 3 n, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "druids",
+      "Commands": "n, 3 w",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "druids",
+      "Destination": "yaler",
+      "Commands": "n, 2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "havens",
+      "Destination": "catapult-haven",
+      "Commands": "8 s, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "havene",
+      "Destination": "cobbled",
+      "Commands": "say open gate, 5 e",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "cobbled",
+      "Destination": "havene",
+      "Commands": "4 w, knock on gate, w",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "cobbled",
+      "Destination": "salamander",
+      "Commands": "ne, u, w, n, e, 3 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "havens",
+      "Destination": "shadow",
+      "Commands": "5 w, enter shadow, out",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "shadow",
+      "Destination": "lava",
+      "Commands": "e, s, enter painting",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "lava",
+      "Destination": "spire",
+      "Commands": "2 e, 2 s, 2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "findle",
+      "Destination": "village",
+      "Commands": "w, 3 n, 2 nw, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "village",
+      "Destination": "svalich",
+      "Commands": "2 ne, w, n, w, n, 2 ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "svalich",
+      "Destination": "verili",
+      "Commands": "2 e, 2 ne, n, ne, 2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "havens",
+      "Destination": "havene",
+      "Commands": "5 e, 5 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "forest",
+      "Destination": "orlo",
+      "Commands": "5 n, w, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "fenlar",
+      "Destination": "memni",
+      "Commands": "2 n, e, search statue, 6 e",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "memni",
+      "Destination": "fenlar",
+      "Commands": "7 w, 2 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "forest",
+      "Destination": "silus",
+      "Commands": "s, 7 w, enter",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "silus",
+      "Destination": "forest",
+      "Commands": "out, 7 e, n",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "salamander",
+      "Destination": "hole",
+      "Commands": "4 w, 2 n, 2 w, 3 n, 2 e, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "mirror-chapel",
+      "Destination": "mirror-camile",
+      "Commands": "step into mirror",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-camile",
+      "Destination": "mirror-eridan",
+      "Commands": "step into mirror",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-eridan",
+      "Destination": "mirror-chapel",
+      "Commands": "step into mirror",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-eridan",
+      "Destination": "jerky",
+      "Commands": "u, w, 3 s, 3 e, 4 s, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "jerky",
+      "Destination": "eridane",
+      "Commands": "e, 4 n, 4 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "catapult-crystal",
+      "Destination": "catapult-haven",
+      "Commands": "haven",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "catapult-haven",
+      "Destination": "catapult-crystal",
+      "Commands": "crystal",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "catapult-orient",
+      "Destination": "catapult-crystal",
+      "Commands": "crystal",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "catapult-crystal",
+      "Destination": "clearing",
+      "Commands": "orient",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-camile",
+      "Destination": "catapult-crystal",
+      "Commands": "w, s, 2 w, nw",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "shadow",
+      "Destination": "roz",
+      "Commands": "2 e, ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "roz",
+      "Destination": "shop",
+      "Commands": "se, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "roz",
+      "Destination": "parthenon",
+      "Commands": "7 n, 6 u, n, d, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "shadow",
+      "Destination": "havens",
+      "Commands": "s, stand behind statue, 2 n, e, 3 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "parthenon",
+      "Destination": "beast",
+      "Commands": "5 s, 3 e, 6 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "findle",
+      "Destination": "pier",
+      "Commands": "w, n, 3 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "pier",
+      "Destination": "ladder",
+      "Commands": "river, 3 n, pier, e",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "ladder",
+      "Destination": "pier",
+      "Commands": "w, river, 3 s, pier",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "ladder",
+      "Destination": "cliff",
+      "Commands": "w, river, 3 n, pier, w",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "cliff",
+      "Destination": "ladder",
+      "Commands": "e, river, 3 s, pier, e",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "hole",
+      "Destination": "house",
+      "Commands": "d, 3 e, 2 s, 3 w, s, 2 e, 3 s, w, 2 s, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "house",
+      "Destination": "jolan",
+      "Commands": "2 s, 6 e, s, ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "mirror-camile",
+      "Destination": "mainland",
+      "Commands": "w, 3 s, se, 2 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "mirror-camile",
+      "Destination": "waterfall",
+      "Commands": "w, 3 s, se, e, 2 ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "waterfall",
+      "Destination": "pit",
+      "Commands": "enter cave, e, ne, se",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "pit",
+      "Destination": "waterfall",
+      "Commands": "nw, sw, 2 w",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "orientn",
+      "Destination": "oriente",
+      "Commands": "2 e, 2 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orientn",
+      "Destination": "orientw",
+      "Commands": "2 w, 2 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orients",
+      "Destination": "oriente",
+      "Commands": "2 e, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orients",
+      "Destination": "orientw",
+      "Commands": "2 w, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "oriente",
+      "Destination": "emperor",
+      "Commands": "2 w, nw, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "clearing",
+      "Destination": "oriente",
+      "Commands": "n, 5 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orientn",
+      "Destination": "catapult-orient",
+      "Commands": "3 n, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orients",
+      "Destination": "brijo",
+      "Commands": "8 s, 4 se, 5 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orientw",
+      "Destination": "kijo",
+      "Commands": "6 w, 3 sw, 2 w, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "largeclearing",
+      "Destination": "dragons",
+      "Commands": "3 w, 2 nw, n, 3 ne, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "serpent",
+      "Destination": "emp",
+      "Commands": "3 n, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "serpent",
+      "Destination": "bar",
+      "Commands": "d, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "church",
+      "Commands": "w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "bank",
+      "Commands": "e, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "general",
+      "Commands": "e, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "ballroom",
+      "Commands": "7 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "ballroom",
+      "Destination": "stairwell",
+      "Commands": "5 w, 2 u",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "ballroom",
+      "Destination": "warder",
+      "Commands": "2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "ballroom",
+      "Destination": "cavein",
+      "Commands": "s, 3 e, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "warder",
+      "Destination": "sewer",
+      "Commands": "d, 7 e, d, 3 w, 7 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "sewer",
+      "Destination": "admon",
+      "Commands": "w, n, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "courtyard",
+      "Commands": "ne, n, ne, e, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "courtyard",
+      "Destination": "clerk",
+      "Commands": "w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "westmouth",
+      "Commands": "6 w, 2 s, enter",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "westmouth",
+      "Destination": "dragonsgate",
+      "Commands": "exit, 2 n, 6 e",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-eridan",
+      "Destination": "caradan",
+      "Commands": "u, w, 3 s, w, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "courtyard",
+      "Destination": "gargoyles",
+      "Commands": "2 e, n, 4 e, 3 n, 4 ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "clearing",
+      "Destination": "glint",
+      "Commands": "n, 2 e, 10 n, 10 e, 5 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "glint",
+      "Destination": "willow",
+      "Commands": "5 ne, 4 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "willow",
+      "Destination": "temple",
+      "Commands": "search bushes, move bushes, n, nw, 2 w, 3 n",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "temple",
+      "Destination": "willow",
+      "Commands": "3 s, 2 e, se, 2 s",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "mirror-eridan",
+      "Destination": "market",
+      "Commands": "u, w, 6 s, 2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dukis",
+      "Destination": "villa",
+      "Commands": "3 e, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dukis",
+      "Destination": "olson",
+      "Commands": "5 e, 3 n, ne, 6 n, 2 w, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "nav",
+      "Destination": "flying",
+      "Commands": "underground",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "cobbled",
+      "Destination": "havenpier",
+      "Commands": "3 s, 5 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "frigate-haven",
+      "Destination": "frigate",
+      "Commands": "board ship",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "frigate-moroda",
+      "Destination": "moroda-isle",
+      "Commands": "leave ship",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "moroda-isle",
+      "Destination": "toadie",
+      "Commands": "3 n, u",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "toadie",
+      "Destination": "cobbled",
+      "Commands": "d, enter painting, 2 n",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "gargoyles",
+      "Destination": "lake",
+      "Commands": "6 n, sw, n, nw, 2 n, nw, n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "mainland",
+      "Destination": "rowing",
+      "Commands": "row to the island",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "island",
+      "Destination": "rowing",
+      "Commands": "row to the mainland",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "island",
+      "Destination": "stonetower",
+      "Commands": "5 s, 2 w, 3 n, nw, 2 n, enter",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "stonetower",
+      "Destination": "island",
+      "Commands": "out, 2 s, se, 3 s, 2 e, 5 n",
+      "IsTwoWay": false
+    },
+    {
+      "Source": "newbie",
+      "Destination": "foyer",
+      "Commands": "4 e, 4 s, w, 8 s, 4 w, 2 s, 2 w, n, 2 w, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "foyer",
+      "Destination": "mordo",
+      "Commands": "e, s, u, 2 n, w, 2 s, w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "kobold",
+      "Commands": "4 e, 4 ne, 3 w",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "foothills",
+      "Commands": "ne, n, 2 ne",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "foothills",
+      "Destination": "monastery",
+      "Commands": "ne, 5 n, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "foothills",
+      "Destination": "lamath",
+      "Commands": "ne, 9 e, 6 n, 2 ne, 2 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "dragonsgate",
+      "Destination": "druids",
+      "Commands": "6 w, 5 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "druids",
+      "Destination": "rangers",
+      "Commands": "4 n, 2 e, 2 n, 3 e, 5 n",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "druids",
+      "Destination": "oneking",
+      "Commands": "2 n, 5 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "roz",
+      "Destination": "athens-dock",
+      "Commands": "2 se, 2 e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "orientn",
+      "Destination": "mirror-orient",
+      "Commands": "9 n, 2 nw, n, nw, 5 w, s, sw, 4 s, e, s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "village",
+      "Destination": "viking",
+      "Commands": "3 n, 2 e, 3 s",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "newbie",
+      "Destination": "rancid-dragon",
+      "Commands": "4 e, s, e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "viking",
+      "Destination": "vikingpub",
+      "Commands": "e",
+      "IsTwoWay": true
+    },
+    {
+      "Source": "flying",
+      "Destination": "church",
+      "WaitEvent": "OnArriveAtChurch"
+    },
+    {
+      "Source": "havenpier",
+      "Destination": "frigate-haven",
+      "WaitEvent": "OnFrigateArrived"
+    },
+    {
+      "Source": "frigate",
+      "Destination": "frigate-moroda",
+      "WaitEvent": "OnFrigateArrivedMoroda"
+    },
+    {
+      "Source": "rowing",
+      "Destination": "island",
+      "WaitEvent": "OnFinishedRowing"
+    },
+    {
+      "Source": "rowing",
+      "Destination": "mainland",
+      "WaitEvent": "OnFinishedRowing"
+    }
+  ]
+}
