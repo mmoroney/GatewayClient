@@ -28,6 +28,8 @@ try {
         Console.WriteLine("Health checked");
     });
 
+    TravelManager.Load();
+
     var readTask = Task.Run(ReadFromServer);
 
     while (_isConnected) {

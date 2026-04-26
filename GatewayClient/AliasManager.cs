@@ -16,7 +16,7 @@ namespace GatewayClient {
             AddAlias(@"^travel\s+(\S+)\s+(\S+)$", tokens => {
                 string source = tokens[0];
                 string destination = tokens[1];
-                Console.WriteLine($"DoTravel {source} {destination}");
+                TravelManager.DoTravel(source, destination);
             });
         }
 
