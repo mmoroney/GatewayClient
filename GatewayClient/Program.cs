@@ -1,4 +1,4 @@
-﻿using GatewayClient;
+using GatewayClient;
 using System;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
@@ -6,9 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-TcpClient? _client = null;
-NetworkStream? _stream = null;
-bool _isConnected = false;
+Gateway? gateway = null;
 
 string host = "gatewaymud.org";
 int port = 6969;
@@ -17,10 +15,9 @@ Console.Title = "C# Gateway MUD Client";
 Console.WriteLine($"--- Connecting to {host}:{port} ---");
 
 try {
-    _client = new TcpClient();
-    await _client.ConnectAsync(host, port);
-    _stream = _client.GetStream();
-    _isConnected = true;
+    var client = new TcpClient();
+    await client.ConnectAsync(host, port);
+    gateway = new Gateway(client);
 
     Console.WriteLine("--- Connected! (Press Ctrl+C to quit) ---\n");
 
@@ -32,7 +29,7 @@ try {
 
     var readTask = Task.Run(ReadFromServer);
 
-    while (_isConnected) {
+    while (gateway.IsConnected) {
         string? input = Console.ReadLine();
         if (string.IsNullOrEmpty(input)) continue;
 
@@ -40,31 +37,28 @@ try {
             continue;
         }
 
-        // Send the command + newline to the MUD
-        byte[] data = Encoding.ASCII.GetBytes(input + "\n");
-        await _stream.WriteAsync(data);
+        // Send the command to the MUD
+        await Gateway.SendAsync(input);
     }
 }
 catch (Exception ex) {
     Console.WriteLine($"\n[ERROR] {ex.Message}");
 }
 finally {
-    _isConnected = false;
-    _stream?.Close();
-    _client?.Close();
+    gateway?.Dispose();
 }
 
 async Task ReadFromServer() {
     byte[] buffer = new byte[4096];
 
     try {
-        while (_isConnected) {
+        while (gateway != null && gateway.IsConnected) {
             // Wait for data from the server
-            int bytesRead = await _stream.ReadAsync(buffer);
+            int bytesRead = await gateway.ReadAsync(buffer);
 
             if (bytesRead == 0) {
                 Console.WriteLine("\n[INFO] Server closed the connection.");
-                _isConnected = false;
+                gateway.Disconnect();
                 break;
             }
 
@@ -75,7 +69,7 @@ async Task ReadFromServer() {
         }
     }
     catch (Exception) {
-        if (_isConnected)
+        if (gateway != null && gateway.IsConnected)
             Console.WriteLine("\n[INFO] Disconnected from server.");
     }
 }
