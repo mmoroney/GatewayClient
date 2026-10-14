@@ -1,31 +1,44 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace GatewayClient {
     public static class TriggerManager {
-        private static readonly Trigger[] triggers = {
-        new("OnHealthCheck", @".*\[HP: (\d+)\/\((\d+)\)  SP: (\d+)\/\((\d+)\)\]") };
+        private static readonly Dictionary<string, Trigger> _triggers = new(StringComparer.OrdinalIgnoreCase);
+        private static readonly object _lock = new();
+
+        static TriggerManager() {
+            RegisterTrigger(new Trigger("OnHealthCheck", @".*\[HP: (\d+)\/\((\d+)\)  SP: (\d+)\/\((\d+)\)\]"));
+        }
+
+        public static void RegisterTrigger(Trigger trigger) {
+            lock (_lock) {
+                _triggers[trigger.Name] = trigger;
+            }
+        }
 
         public static void EnableTrigger(string name, bool isOneShot, Action<string[]> callback) {
-            foreach (var trigger in triggers) {
-                if (trigger.Name == name) {
+            lock (_lock) {
+                if (_triggers.TryGetValue(name, out var trigger)) {
                     trigger.Enable(isOneShot, callback);
-                    return;
                 }
             }
         }
 
         public static void DisableTrigger(string name) {
-            foreach (var trigger in triggers) {
-                if (trigger.Name == name) {
+            lock (_lock) {
+                if (_triggers.TryGetValue(name, out var trigger)) {
                     trigger.Disable();
-                    return;
                 }
             }
         }
 
         public static void ProcessIncomingLine(string line) {
-            foreach(var trigger in triggers) {
+            Trigger[] snapshot;
+            lock (_lock) {
+                snapshot = [.. _triggers.Values];
+            }
+
+            foreach (var trigger in snapshot) {
                 if (trigger.Process(line)) {
                     return;
                 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
@@ -22,7 +22,7 @@ namespace GatewayClient {
         }
 
         public void Disable() {
-            IsEnabled = true;
+            IsEnabled = false;
             IsOneShot = false;
             Callback = null;
         }

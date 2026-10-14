@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -17,6 +17,16 @@ namespace GatewayClient {
                 string source = tokens[0];
                 string destination = tokens[1];
                 TravelManager.DoTravel(source, destination);
+            });
+
+            AddAlias(@"^checkvenom$", async _ => {
+                try {
+                    var weight = await SerpentManager.CheckVenomAsync();
+                    Console.WriteLine($"\n[Serpent] Current venom: {weight}");
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n[Serpent] CheckVenom failed: {ex.Message}");
+                }
             });
         }
 
