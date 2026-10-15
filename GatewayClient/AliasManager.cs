@@ -38,6 +38,22 @@ namespace GatewayClient {
                     Console.WriteLine($"\n[Character] CheckHealth failed: {ex.Message}");
                 }
             });
+
+            AddAlias(@"^serpentheal$", async _ => {
+                try {
+                    Console.WriteLine("\n[Serpent] Initiating toxopiate healing...");
+                    bool success = await SerpentManager.SerpentHealAsync();
+                    if (success) {
+                        Console.WriteLine("\n[Serpent] Healing complete: You are at full strength.");
+                    }
+                    else {
+                        Console.WriteLine("\n[Serpent] Healing failed: Insufficient distillate.");
+                    }
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n[Serpent] Heal failed or timed out: {ex.Message}");
+                }
+            });
         }
 
         public static void AddAlias(string pattern, Action<string[]> callback) {
