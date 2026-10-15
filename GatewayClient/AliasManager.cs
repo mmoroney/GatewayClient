@@ -28,6 +28,16 @@ namespace GatewayClient {
                     Console.WriteLine($"\n[Serpent] CheckVenom failed: {ex.Message}");
                 }
             });
+
+            AddAlias(@"^checkhealth$", async _ => {
+                try {
+                    var health = await CharacterManager.CheckHealthAsync();
+                    Console.WriteLine($"\n[Character] {health}");
+                }
+                catch (Exception ex) {
+                    Console.WriteLine($"\n[Character] CheckHealth failed: {ex.Message}");
+                }
+            });
         }
 
         public static void AddAlias(string pattern, Action<string[]> callback) {

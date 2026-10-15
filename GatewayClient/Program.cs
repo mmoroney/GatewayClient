@@ -21,9 +21,6 @@ try {
 
     Console.WriteLine("--- Connected! (Press Ctrl+C to quit) ---\n");
 
-    TriggerManager.EnableTrigger("OnHealthCheck", false, (string[] tokens) => {
-        Console.WriteLine("Health checked");
-    });
 
     TravelManager.Load();
 

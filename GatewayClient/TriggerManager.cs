@@ -6,9 +6,6 @@ namespace GatewayClient {
         private static readonly Dictionary<string, Trigger> _triggers = new(StringComparer.OrdinalIgnoreCase);
         private static readonly object _lock = new();
 
-        static TriggerManager() {
-            RegisterTrigger(new Trigger("OnHealthCheck", @".*\[HP: (\d+)\/\((\d+)\)  SP: (\d+)\/\((\d+)\)\]"));
-        }
 
         public static void RegisterTrigger(Trigger trigger) {
             lock (_lock) {
